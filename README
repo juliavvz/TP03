@@ -2,54 +2,79 @@
 
 ## Descrição do Projeto
 
-Este projeto implementa uma classe `Hora` em Java para representar um horário (hora, minuto e segundo), com validação de dados, formatação para diferentes padrões e métodos interativos para entrada pelo usuário.
+Este projeto implementa uma classe Hora em Java para representar um horário (hora, minuto e segundo), com validacao de dados, formatacao para diferentes padroes e metodos interativos para entrada pelo usuario.
 
 ## Funcionalidades
 
 ### Construtores
-- `Hora()`: usuário digita os valores (com validação)
-- `Hora(int h, int m, int s)`: recebe valores como parâmetros
+- Hora(): usuario digita os valores (com validacao)
+- Hora(int h, int m, int s): recebe valores como parametros
 
-### Métodos set
-- `setHor(int h)`, `setMin(int m)`, `setSeg(int s)`: atribuem valores diretamente
-- `setHor()`, `setMin()`, `setSeg()`: usuário digita o valor (com validação)
+### Metodos set
+- setHor(int h), setMin(int m), setSeg(int s): atribuem valores diretamente
+- setHor(), setMin(), setSeg(): usuario digita o valor (com validacao)
 
-### Métodos get
-- `getHor()`, `getMin()`, `getSeg()`: retornam os valores
+### Metodos get
+- getHor(), getMin(), getSeg(): retornam os valores
 
-### Formatação
-- `getHora1()`: formato 24h (hh:mm:ss)
-- `getHora2()`: formato 12h com AM/PM (hh:mm:ss AM/PM)
+### Formatacao
+- getHora1(): formato 24h (hh:mm:ss)
+- getHora2(): formato 12h com AM/PM (hh:mm:ss AM/PM)
 
-### Conversão
-- `getSegundos()`: retorna total de segundos do horário
+### Conversao
+- getSegundos(): retorna total de segundos do horario
 
 ### Tratamento de erros
-- Previne entradas inválidas (números fora do intervalo ou caracteres não numéricos)
+- Previne entradas invalidas (numeros fora do intervalo ou caracteres nao numericos)
 
 ## Como executar
 
-### Pré-requisitos
+### Pre-requisitos
 - Java JDK 8 ou superior
 
 ### Passos
 
-1. Clone o repositório:
-```bash
+1. Clone o repositorio:
 git clone https://github.com/juliavvz/TP03.git
 cd TP03
 
-2. Compile os arquivos Java:
-
-```bash
+2. Compile:
 javac src/Hora.java src/TestaHora.java
-```
 
-3. **Execute o programa de teste:**
-
-```bash
+3. Execute:
 java src.TestaHora
-```
 
-### Licença
+## Exemplo de saida
+
+=== TESTE DA CLASSE HORA ===
+
+--- Teste 1: Construtor Hora(int, int, int) ---
+Horario criado (14, 30, 45): 14:30:45
+Formato AM/PM: 02:30:45 PM
+Total de segundos: 52245 segundos
+
+--- Teste 5: Construtor Hora() ---
+Crie um horario digitando os valores:
+Digite a hora (0-23): 08
+Digite o minuto (0-59): 05
+Digite o segundo (0-59): 10
+
+Seu horario: 08:05:10
+Em AM/PM: 08:05:10 AM
+Segundos: 29110
+
+## Estrutura do projeto
+
+TP03/
+├── src/
+│   ├── Hora.java
+│   └── TestaHora.java
+└── README.md
+
+## Tecnologias
+- Java (JDK 8+)
+
+## Licença
 Este projeto é livre para uso educacional.
+
+
