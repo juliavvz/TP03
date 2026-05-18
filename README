@@ -2,48 +2,44 @@
 
 ## Descrição do Projeto
 
-Este projeto foi desenvolvido como parte de um exercício de Programação Orientada a Objetos em Java. Ele implementa uma classe `Hora` que representa um horário (hora, minuto e segundo), com validação de dados, formatação para diferentes padrões e métodos interativos para entrada pelo usuário.
+Este projeto implementa uma classe `Hora` em Java para representar um horário (hora, minuto e segundo), com validação de dados, formatação para diferentes padrões e métodos interativos para entrada pelo usuário.
 
 ## Funcionalidades
 
-A classe `Hora` oferece:
+### Construtores
+- `Hora()`: usuário digita os valores (com validação)
+- `Hora(int h, int m, int s)`: recebe valores como parâmetros
 
-- **Dois construtores:**
-  - `Hora()`: permite que o usuário digite os valores de hora, minuto e segundo, com validação e repetição até que sejam válidos.
-  - `Hora(int h, int m, int s)`: recebe os valores como parâmetros e os valida.
+### Métodos set
+- `setHor(int h)`, `setMin(int m)`, `setSeg(int s)`: atribuem valores diretamente
+- `setHor()`, `setMin()`, `setSeg()`: usuário digita o valor (com validação)
 
-- **Métodos `set` (com e sem parâmetros):**
-  - `setHor(int h)`, `setMin(int m)`, `setSeg(int s)`: atribuem valores diretamente.
-  - `setHor()`, `setMin()`, `setSeg()`: solicitam que o usuário digite o valor, com validação.
+### Métodos get
+- `getHor()`, `getMin()`, `getSeg()`: retornam os valores
 
-- **Métodos `get`:**
-  - `getHor()`, `getMin()`, `getSeg()`: retornam os respectivos valores.
+### Formatação
+- `getHora1()`: formato 24h (hh:mm:ss)
+- `getHora2()`: formato 12h com AM/PM (hh:mm:ss AM/PM)
 
-- **Formatação da hora:**
-  - `getHora1()`: retorna a hora no formato 24h (`hh:mm:ss`).
-  - `getHora2()`: retorna a hora no formato 12h com indicação AM/PM (`hh:mm:ss AM/PM`).
+### Conversão
+- `getSegundos()`: retorna total de segundos do horário
 
-- **Conversão:**
-  - `getSegundos()`: retorna o total de segundos representado pelo horário.
-
-- **Tratamento de exceções:** previne entradas inválidas (números fora das faixas permitidas ou caracteres não numéricos).
+### Tratamento de erros
+- Previne entradas inválidas (números fora do intervalo ou caracteres não numéricos)
 
 ## Como executar
 
 ### Pré-requisitos
+- Java JDK 8 ou superior
 
-- Java Development Kit (JDK) instalado (versão 8 ou superior).
-- Um terminal ou prompt de comando.
+### Passos
 
-### Passos para compilar e executar
+1. Clone o repositório:
+```bash
+git clone https://github.com/juliavvz/TP03.git
+cd TP03
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/juliavvz/TP03.git
-   cd TP03
-   ```
-
-2. **Compile os arquivos Java:**
+2. Compile os arquivos Java:
 
 ```bash
 javac src/Hora.java src/TestaHora.java
