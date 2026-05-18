@@ -1,38 +1,38 @@
-# TP03 - Classe Hora em Java
+TP03 - Classe Hora em Java
 
-## Descrição do Projeto
+Descrição do Projeto
 
 Este projeto implementa uma classe Hora em Java para representar um horário (hora, minuto e segundo), com validacao de dados, formatacao para diferentes padroes e metodos interativos para entrada pelo usuario.
 
-## Funcionalidades
+Funcionalidades
 
-### Construtores
+  Construtores
 - Hora(): usuario digita os valores (com validacao)
 - Hora(int h, int m, int s): recebe valores como parametros
 
-### Metodos set
+  Metodos set
 - setHor(int h), setMin(int m), setSeg(int s): atribuem valores diretamente
 - setHor(), setMin(), setSeg(): usuario digita o valor (com validacao)
 
-### Metodos get
+  Metodos get
 - getHor(), getMin(), getSeg(): retornam os valores
 
-### Formatacao
+  Formatacao
 - getHora1(): formato 24h (hh:mm:ss)
 - getHora2(): formato 12h com AM/PM (hh:mm:ss AM/PM)
 
-### Conversao
+  Conversao
 - getSegundos(): retorna total de segundos do horario
 
-### Tratamento de erros
+  Tratamento de erros
 - Previne entradas invalidas (numeros fora do intervalo ou caracteres nao numericos)
 
-## Como executar
+  Como executar
 
-### Pre-requisitos
+  Pre-requisitos
 - Java JDK 8 ou superior
 
-### Passos
+  Passos
 
 1. Clone o repositorio:
 git clone https://github.com/juliavvz/TP03.git
@@ -44,7 +44,7 @@ javac src/Hora.java src/TestaHora.java
 3. Execute:
 java src.TestaHora
 
-## Exemplo de saida
+   Exemplo de saida
 
 === TESTE DA CLASSE HORA ===
 
@@ -63,7 +63,7 @@ Seu horario: 08:05:10
 Em AM/PM: 08:05:10 AM
 Segundos: 29110
 
-## Estrutura do projeto
+ Estrutura do projeto
 
 TP03/
 ├── src/
@@ -71,10 +71,10 @@ TP03/
 │   └── TestaHora.java
 └── README.md
 
-## Tecnologias
+ Tecnologias
 - Java (JDK 8+)
 
-## Licença
+ Licença
 Este projeto é livre para uso educacional.
 
 
