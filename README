@@ -1,80 +1,148 @@
-TP03 - Classe Hora em Java
+# TP03 - Classe Hora em Java
 
-Descrição do Projeto
+## Descrição do Projeto
 
-Este projeto implementa uma classe Hora em Java para representar um horário (hora, minuto e segundo), com validacao de dados, formatacao para diferentes padroes e metodos interativos para entrada pelo usuario.
+Este projeto implementa uma classe `Hora` em Java para representar um horário completo (hora, minuto e segundo), utilizando conceitos de Programação Orientada a Objetos.
 
-Funcionalidades
+A aplicação possui validação de dados, diferentes formatos de exibição do horário e métodos interativos para entrada de dados pelo usuário.
 
-  Construtores
-- Hora(): usuario digita os valores (com validacao)
-- Hora(int h, int m, int s): recebe valores como parametros
+---
 
-  Metodos set
-- setHor(int h), setMin(int m), setSeg(int s): atribuem valores diretamente
-- setHor(), setMin(), setSeg(): usuario digita o valor (com validacao)
+## Funcionalidades
 
-  Metodos get
-- getHor(), getMin(), getSeg(): retornam os valores
+### Construtores
 
-  Formatacao
-- getHora1(): formato 24h (hh:mm:ss)
-- getHora2(): formato 12h com AM/PM (hh:mm:ss AM/PM)
+- `Hora()`
+  - O usuário digita os valores pelo teclado
+  - Possui validação de entrada
 
-  Conversao
-- getSegundos(): retorna total de segundos do horario
+- `Hora(int h, int m, int s)`
+  - Recebe os valores diretamente por parâmetros
 
-  Tratamento de erros
-- Previne entradas invalidas (numeros fora do intervalo ou caracteres nao numericos)
+---
 
-  Como executar
+## Métodos Set
 
-  Pre-requisitos
-- Java JDK 8 ou superior
+### Com parâmetros
 
-  Passos
+- `setHor(int h)`
+- `setMin(int m)`
+- `setSeg(int s)`
 
-1. Clone o repositorio:
+Permitem alterar os valores diretamente.
+
+### Sem parâmetros
+
+- `setHor()`
+- `setMin()`
+- `setSeg()`
+
+Solicitam os valores ao usuário via teclado com tratamento de erros.
+
+---
+
+## Métodos Get
+
+- `getHor()`
+- `getMin()`
+- `getSeg()`
+
+Retornam os valores armazenados do horário.
+
+---
+
+## Formatação
+
+### Formato 24 horas
+
+```java
+getHora1()
+
+Exemplo:
+
+14:30:45
+Formato 12 horas (AM/PM)
+getHora2()
+
+Exemplo:
+
+02:30:45 PM
+Conversão
+Total de segundos
+getSegundos()
+
+Retorna o total de segundos do horário.
+
+Exemplo:
+
+14:30:45 → 52245 segundos
+Tratamento de Erros
+
+O projeto realiza validação para evitar:
+
+Horas fora do intervalo 0-23
+Minutos fora do intervalo 0-59
+Segundos fora do intervalo 0-59
+Entrada de caracteres não numéricos
+
+## Como Executar
+Pré-requisitos
+Java JDK 8 ou superior
+VS Code, NetBeans ou terminal
+Passos
+1. Clone o repositório
 git clone https://github.com/juliavvz/TP03.git
 cd TP03
+2. Compile os arquivos
+javac src/Hora.java src/TesteHora.java
+3. Execute o programa
+java src.TesteHora
 
-2. Compile:
-javac src/Hora.java src/TestaHora.java
-
-3. Execute:
-java src.TestaHora
-
-   Exemplo de saida
+## Exemplo de Saída
 
 === TESTE DA CLASSE HORA ===
 
 --- Teste 1: Construtor Hora(int, int, int) ---
-Horario criado (14, 30, 45): 14:30:45
-Formato AM/PM: 02:30:45 PM
-Total de segundos: 52245 segundos
 
---- Teste 5: Construtor Hora() ---
-Crie um horario digitando os valores:
+Hora formato 24h: 13:14:15
+Hora formato AM/PM: 01:14:15 PM
+Total de segundos: 47655
+
+GETTERS
+Hora: 13
+Minuto: 14
+Segundo: 15
+
+ALTERA HORA
+Nova hora: 11:22:33
+
+SEM PARAMETROS
+
 Digite a hora (0-23): 08
 Digite o minuto (0-59): 05
 Digite o segundo (0-59): 10
 
-Seu horario: 08:05:10
-Em AM/PM: 08:05:10 AM
-Segundos: 29110
-
- Estrutura do projeto
-
+Hora formato 24h: 08:05:10
+Hora formato AM/PM: 08:05:10 AM
+Total de segundos: 29110
+Estrutura do Projeto
 TP03/
 ├── src/
 │   ├── Hora.java
-│   └── TestaHora.java
+│   └── TesteHora.java
 └── README.md
 
- Tecnologias
-- Java (JDK 8+)
+## Tecnologias Utilizadas
+Java
+Programação Orientada a Objetos (POO)
+VS Code / NetBeans
 
- Licença
+- Projeto acadêmico desenvolvido para prática de Programação Orientada a Objetos em Java.
+
+## Licença
+
 Este projeto é livre para uso educacional.
 
+## Vídeo teste do código rodando
 
+- https://youtu.be/cVEGqFXWt8s
