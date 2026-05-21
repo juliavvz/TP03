@@ -192,8 +192,8 @@ TP03/
 
 # Autores
 
-Júlia Vitória - GitHub: @juliavvz
-Lucas Antonio - GitHub: @rapaduragames
+- Júlia Vitória - GitHub: @juliavvz
+- Lucas Antonio - GitHub: @rapaduragames
 
 ---
 
