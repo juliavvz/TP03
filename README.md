@@ -2,58 +2,204 @@
 
 ## Descrição do Projeto
 
-Este projeto foi desenvolvido como parte de um exercício de Programação Orientada a Objetos em Java. Ele implementa uma classe `Hora` que representa um horário (hora, minuto e segundo), com validação de dados, formatação para diferentes padrões e métodos interativos para entrada pelo usuário.
+Este projeto implementa uma classe `Hora` em Java para representar um horário completo (hora, minuto e segundo), utilizando conceitos de Programação Orientada a Objetos.
 
-## Funcionalidades
+A aplicação possui validação de dados, diferentes formatos de exibição do horário e métodos interativos para entrada de dados pelo usuário.
 
-A classe `Hora` oferece:
+---
 
-- **Dois construtores:**
-  - `Hora()`: permite que o usuário digite os valores de hora, minuto e segundo, com validação e repetição até que sejam válidos.
-  - `Hora(int h, int m, int s)`: recebe os valores como parâmetros e os valida.
+# Funcionalidades
 
-- **Métodos `set` (com e sem parâmetros):**
-  - `setHor(int h)`, `setMin(int m)`, `setSeg(int s)`: atribuem valores diretamente.
-  - `setHor()`, `setMin()`, `setSeg()`: solicitam que o usuário digite o valor, com validação.
+## Construtores
 
-- **Métodos `get`:**
-  - `getHor()`, `getMin()`, `getSeg()`: retornam os respectivos valores.
+### `Hora()`
+- O usuário digita os valores pelo teclado
+- Possui validação de entrada
 
-- **Formatação da hora:**
-  - `getHora1()`: retorna a hora no formato 24h (`hh:mm:ss`).
-  - `getHora2()`: retorna a hora no formato 12h com indicação AM/PM (`hh:mm:ss AM/PM`).
+### `Hora(int h, int m, int s)`
+- Recebe os valores diretamente por parâmetros
 
-- **Conversão:**
-  - `getSegundos()`: retorna o total de segundos representado pelo horário.
+---
 
-- **Tratamento de exceções:** previne entradas inválidas (números fora das faixas permitidas ou caracteres não numéricos).
+## Métodos Set
 
-## Como executar
+### Com parâmetros
+- `setHor(int h)`
+- `setMin(int m)`
+- `setSeg(int s)`
 
-### Pré-requisitos
+Permitem alterar os valores diretamente.
 
-- Java Development Kit (JDK) instalado (versão 8 ou superior).
-- Um terminal ou prompt de comando.
+### Sem parâmetros
+- `setHor()`
+- `setMin()`
+- `setSeg()`
 
-### Passos para compilar e executar
+Solicitam os valores ao usuário via teclado com tratamento de erros.
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/juliavvz/TP03.git
-   cd TP03
-   ```
+---
 
-2. **Compile os arquivos Java:**
+## Métodos Get
 
-```bash
-javac src/Hora.java src/TestaHora.java
+- `getHor()`
+- `getMin()`
+- `getSeg()`
+
+Retornam os valores armazenados do horário.
+
+---
+
+## Formatação
+
+### Formato 24 horas
+
+```java
+getHora1()
 ```
 
-3. **Execute o programa de teste:**
+Exemplo:
 
-```bash
-java src.TestaHora
+```plaintext
+14:30:45
 ```
 
-### Licença
+### Formato 12 horas (AM/PM)
+
+```java
+getHora2()
+```
+
+Exemplo:
+
+```plaintext
+02:30:45 PM
+```
+
+---
+
+## Conversão
+
+### Total de segundos
+
+```java
+getSegundos()
+```
+
+Retorna o total de segundos do horário.
+
+Exemplo:
+
+```plaintext
+14:30:45 → 52245 segundos
+```
+
+---
+
+# Tratamento de Erros
+
+O projeto realiza validação para evitar:
+
+- Horas fora do intervalo `0-23`
+- Minutos fora do intervalo `0-59`
+- Segundos fora do intervalo `0-59`
+- Entrada de caracteres não numéricos
+
+---
+
+# Como Executar
+
+## Pré-requisitos
+
+- Java JDK 8 ou superior
+- VS Code, NetBeans ou terminal
+
+---
+
+## Passos
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/juliavvz/TP03.git
+cd TP03
+```
+
+### 2. Compile os arquivos
+
+```bash
+javac src/Hora.java src/TesteHora.java
+```
+
+### 3. Execute o programa
+
+```bash
+java src.TesteHora
+```
+
+---
+
+# Exemplo de Saída
+
+```plaintext
+=== TESTE DA CLASSE HORA ===
+
+--- Teste 1: Construtor Hora(int, int, int) ---
+
+Hora formato 24h: 13:14:15
+Hora formato AM/PM: 01:14:15 PM
+Total de segundos: 47655
+
+GETTERS
+Hora: 13
+Minuto: 14
+Segundo: 15
+
+ALTERA HORA
+Nova hora: 11:22:33
+
+SEM PARAMETROS
+
+Digite a hora (0-23): 08
+Digite o minuto (0-59): 05
+Digite o segundo (0-59): 10
+
+Hora formato 24h: 08:05:10
+Hora formato AM/PM: 08:05:10 AM
+Total de segundos: 29110
+```
+
+---
+
+# Estrutura do Projeto
+
+```plaintext
+TP03/
+├── src/
+│   ├── Hora.java
+│   └── TesteHora.java
+└── README.md
+```
+
+---
+
+# Tecnologias Utilizadas
+
+- Java
+- Programação Orientada a Objetos (POO)
+- VS Code / NetBeans
+
+---
+
+# Autor
+
+Projeto acadêmico desenvolvido para prática de Programação Orientada a Objetos em Java.
+
+---
+
+# Licença
+
 Este projeto é livre para uso educacional.
+
+## Vídeo teste do código rodando
+
+- https://youtu.be/cVEGqFXWt8s
