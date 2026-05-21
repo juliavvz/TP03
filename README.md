@@ -190,9 +190,10 @@ TP03/
 
 ---
 
-# Autor
+# Autores
 
-Projeto acadêmico desenvolvido para prática de Programação Orientada a Objetos em Java.
+Júlia Vitória - GitHub: @juliavvz
+Lucas Antonio - GitHub: @rapaduragames
 
 ---
 
